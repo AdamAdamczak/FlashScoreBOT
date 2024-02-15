@@ -36,7 +36,6 @@ def get_single_match_data(match: browser.Locator,today: str) -> dict[str,str]:
 def check_date(match: browser.Locator, today: str) -> bool:
     date = match.locator('[class="event__time"]').inner_text(timeout=TIMEOUT)
     date = date[:6]
-    today="12.02."
     if date == today:
         return True
     return False
